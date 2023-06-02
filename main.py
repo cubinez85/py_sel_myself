@@ -9,17 +9,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver.get("https://cubinez.ru/")
+driver.get("https://cubinez.ru/sample-page/")
 
 time.sleep(2)
 
 # 👇️ using find_element method 👇️
-search_field = driver.find_element(By.XPATH, "//*[@ decoding=\"async\"]")
+search_field = driver.find_elements(By.XPATH, "//*[@class=\"wp-image-70\"]")
 
 
 
-driver.save_screenshot('bd.png')
-
+driver.save_screenshot("mf.png")
 
 
 time.sleep(2)
